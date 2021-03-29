@@ -12,7 +12,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutomationBase", "Automatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingComTests", "BookingComTests\BookingComTests.csproj", "{6B13FF22-99D8-4404-A363-A162FF54E467}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingComAutomation", "BookingComAutomation\BookingComAutomation.csproj", "{252A4A77-39DB-4884-B850-F8289F51FBFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingComAutomation", "BookingComAutomation\BookingComAutomation.csproj", "{252A4A77-39DB-4884-B850-F8289F51FBFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
