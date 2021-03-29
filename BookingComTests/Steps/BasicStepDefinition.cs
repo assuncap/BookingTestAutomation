@@ -27,5 +27,27 @@ namespace BookingComTests.Steps
             }
             _context.StorePage(HomePage.GotoHomePage(WebDriverHelper.Instance, url));
         }
+
+        [Given(@"I Search for a room for (.*) in '(.*)' for (.*) night (.*) days from today")]
+        public void GivenISearchForARoomForInForNightDaysFromToday(int people, string location, int nights, int targetDays)
+        {
+            var homepage = _context.ValidateCurrentPage<HomePage>();
+            _context.StorePage(homepage.SearchBy(location, DateTimeHelper.FromToday(targetDays), nights));
+        }
+
+        [When(@"I filter by '(.*)'")]
+        public void WhenIFilterBy(string filter)
+        {
+            var searchresults = _context.ValidateCurrentPage<SearchResultsPage>();
+            searchresults.SetFilter(filter);
+        }
+
+        [Then(@"Assert '(.*)' is '(.*)'")]
+        public void ThenAssertIs(string hotel, bool outcome)
+        {
+            var searchresults = _context.ValidateCurrentPage<SearchResultsPage>();
+            searchresults.AssertListing(hotel, outcome, $"Failed to validate that hotel '{hotel}' Listed = {outcome}");
+        }
+
     }
 }

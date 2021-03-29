@@ -18,7 +18,7 @@ namespace BookingComTests.Hooks
         /// should run one
         /// </summary>
         [BeforeTestRun]
-        public void BeforeTestRun()
+        public static void BeforeTestRun()
         {
             string browser = "chrome"; //default browser
             var url = StaticConfig.Url;
@@ -37,7 +37,7 @@ namespace BookingComTests.Hooks
         }
 
         [AfterTestRun]
-        public void AfterTestRun()
+        public static void AfterTestRun()
         {
             WebDriverHelper.Instance.Dispose();
         }
