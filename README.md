@@ -11,7 +11,7 @@ to map the different pages and elements.
 3. **Test Scenarios Layer** - Contains all the Initialization code and all the test scripts
 
 ## Runsettings File
-The (*runsettings*)[https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019] files allows us to define configuration settings for any of the layers test framework. Used correctly you can have the same test scripts against multiple enviroments just by using different configurations.  
+The [*runsettings*]([https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019) files allows us to define configuration settings for any of the layers test framework. Used correctly you can have the same test scripts against multiple enviroments just by using different configurations.  
 For this project the parameters are:
 1. **Enviroment** - Target url for the booking.com homepage.
 2. **Browser** - Browser to be used to run the tests. Chrome and Firefox are supported at this point.
